@@ -3,7 +3,7 @@ zero_to_docs
 
 A repository for guiding you in setting up your own documentation. You can follow these materials along with the template repository here:
 
-* https://github.com/docathon/sphinx_template
+* https://github.com/docathon/sphinx-template
 
 Right now, the repository begins with a set of skeleton materials. These guides cover the following topics:
 
