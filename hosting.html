@@ -1,0 +1,179 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Hosting your documentation &#8212; Zero to Sphinx v0.1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'v0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Extending your Sphinx setup" href="extend.html" />
+    <link rel="prev" title="Adding a new file to our documentation" href="add.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class='prev-next-top'>
+    
+     <a class='left-prev' href="add.html" title="previous chapter">Previous</a>
+     <a class='right-next' href="extend.html" title="next chapter">Next</a>
+  <div style='clear:both;'></div>
+
+  </div>
+
+  
+  <div class="section" id="hosting-your-documentation">
+<h1>Hosting your documentation<a class="headerlink" href="#hosting-your-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="readthedocs">
+<h2>readthedocs<a class="headerlink" href="#readthedocs" title="Permalink to this headline">¶</a></h2>
+<p>readthedocs provides free hosting for documentation, they’ve also got a lot
+of useful features for keeping multiple versions of your documentation online
+simultaneously.</p>
+<p>&lt;TODO add more info&gt;</p>
+</div>
+<div class="section" id="doctr-deploying-documentation-on-ghpages">
+<h2>Doctr: Deploying documentation on GhPages<a class="headerlink" href="#doctr-deploying-documentation-on-ghpages" title="Permalink to this headline">¶</a></h2>
+<p>This is a quick guide to auto-deploying documentation on gh-pages using Travis. You can find a
+sister repository with a template that can be used to build your own documentation here:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/choldgraf/sphinx_template">https://github.com/choldgraf/sphinx_template</a></li>
+</ul>
+<p>First, install Doctr on your local machine:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">doctr</span>
+</pre></div>
+</div>
+<p>Next, we’ll enable Travis Continuous Integration so that it works on your repo.</p>
+<p>Go to <code class="docutils literal"><span class="pre">https://travis-ci.org/profile/&lt;Your</span> <span class="pre">username&gt;</span></code> and enable your repository.</p>
+<div class="section" id="setting-up-doctr">
+<h3>Setting up doctr<a class="headerlink" href="#setting-up-doctr" title="Permalink to this headline">¶</a></h3>
+<p>Doctr has a quickstart configuration similar to <code class="docutils literal"><span class="pre">sphinx-quickstart</span></code>. To use this,
+navigate to your documentation folder and run:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">doctr</span> <span class="n">configure</span>
+</pre></div>
+</div>
+<p>Doctr will then ask you several questions that it uses to authenticate
+with your GitHub account. Once you’ve answered these questions, Doctr
+will output instructions on what to do next.</p>
+</div>
+</div>
+</div>
+
+
+  <div class='prev-next-bottom'>
+    
+     <a class='left-prev' href="add.html" title="previous chapter">Adding a new file to our documentation</a>
+     <a class='right-next' href="extend.html" title="next chapter">Extending your Sphinx setup</a>
+  <div style='clear:both;'></div>
+
+  </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+<h1 class="logo"><a href="index.html">Zero to Sphinx</a></h1>
+
+
+
+<p class="blurb">A quick guide to documenting your project with Sphinx</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=docathon&repo=zero_to_docs&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installing sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structure.html">Sphinx documentation structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modify.html">Customizing the index file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="add.html">Adding a new file to our documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="add.html#edit-the-index-file">Edit the index file</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hosting your documentation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="extend.html">Extending your Sphinx setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Generating a gallery with sphinx-gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="links.html">Links</a></li>
+</ul>
+
+
+<div class="relations">
+<h3>Navigation</h3>
+<ul>
+  <li><a href="index.html">Documentation Home</a><ul>
+  <li><a href="add.html" title="Previous">Prev: Adding a new file to our documentation</a></li>
+  <li><a href="extend.html" title="Next">Next: Extending your Sphinx setup</a></li>
+  </ul>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Chris Holdgraf.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/hosting.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

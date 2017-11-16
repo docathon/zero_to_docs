@@ -1,0 +1,41 @@
+Zero to Sphinx
+--------------
+
+Back in the day, people had to build documentation by hand. That meant
+hand-coding websites, tutorials, examples, and API explanations. Luckily,
+there are tools that let you easily render text files into a
+professional website.
+
+One such tool is Sphinx, a package that scans your codebase for
+structured text, and uses this to convert it into beautifully-rendered
+webpages. Sphinx also has an ecosystem of plugins that will let you
+extend its functionality.
+
+This is a quick introduction to sphinx,
+and will cover setting up a simple sphinx section of your project. It won't
+cover every piece of the sphinx world, but will try to hit 80% of usecases
+for a small-to-medium-sized project.
+
+First things first, this material is heavily based off some
+readily-existing sphinx guides that are out there.
+Check out these links for more information:
+
+* [Sphinx quickstart documentation](http://www.sphinx-doc.org/en/stable/tutorial.html)
+* [Write the docs sphinx tutorial](http://www.writethedocs.org/guide/tools/sphinx/)
+* [Another cheat sheet-style doc](https://pythonhosted.org/an_example_pypi_project/sphinx.html)
+
+
+.. toctree::
+   :maxdepth: 2
+   
+   install
+   structure
+   modify
+   add
+   hosting
+   
+.. toctree::
+
+   extend
+   gallery
+   

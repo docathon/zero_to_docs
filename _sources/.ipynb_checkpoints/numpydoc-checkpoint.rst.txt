@@ -1,0 +1,9 @@
+Using autosummary with sphinx
+=============================
+
+Autosummary (and a similar plugin called ``autodoc``) is useful for automatically
+generating API documentation for your functions, classes, etc. Setting up autosummary
+involves activating a sphinx plugin. TODO
+
+- Add an `automodule` entry for the module you wish to document (see
+  [sphinx_template](https://raw.githubusercontent.com/choldgraf/sphinx_template/master/docs/source/API.rst)).

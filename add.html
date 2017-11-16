@@ -1,0 +1,218 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Adding a new file to our documentation &#8212; Zero to Sphinx v0.1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'v0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Hosting your documentation" href="hosting.html" />
+    <link rel="prev" title="Customizing the index file" href="modify.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class='prev-next-top'>
+    
+     <a class='left-prev' href="modify.html" title="previous chapter">Previous</a>
+     <a class='right-next' href="hosting.html" title="next chapter">Next</a>
+  <div style='clear:both;'></div>
+
+  </div>
+
+  
+  <div class="section" id="adding-a-new-file-to-our-documentation">
+<h1>Adding a new file to our documentation<a class="headerlink" href="#adding-a-new-file-to-our-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Now that our site structure is ready to go, let’s add a page to our documentation. This should
+give you an idea for how to add new content to the site.</p>
+<p>Each section below is a file we’ll create and add t othe documentation.</p>
+<div class="section" id="api-rst">
+<h2><code class="docutils literal"><span class="pre">API.rst</span></code><a class="headerlink" href="#api-rst" title="Permalink to this headline">¶</a></h2>
+<p>We’ll generate a single new page for our API reference, called <code class="docutils literal"><span class="pre">API.rst</span></code>. The file should
+contain the following text:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">API</span> <span class="n">Reference</span>
+<span class="o">=============</span>
+
+<span class="o">..</span> <span class="n">automodule</span><span class="p">::</span> <span class="n">my_package</span>
+   <span class="p">:</span><span class="n">members</span><span class="p">:</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="overview-rst">
+<h2><code class="docutils literal"><span class="pre">overview.rst</span></code><a class="headerlink" href="#overview-rst" title="Permalink to this headline">¶</a></h2>
+<p>We’ll also generate a short overview document that gives more
+detail about the project. Paste in this text:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Overview
+========
+
+This is the example documentation for a fictitious piece of software called
+`my_package`.
+
+The example shows how to:
+
+- Include `NumPy-style docstrings &lt;https://github.com/numpy/numpydoc&gt;`__.
+- Generate a `Sphinx gallery &lt;https://github.com/sphinx-gallery/sphinx-gallery&gt;`__.
+</pre></div>
+</div>
+</div>
+<div class="section" id="awesomepage-rst">
+<h2><code class="docutils literal"><span class="pre">awesomepage.rst</span></code><a class="headerlink" href="#awesomepage-rst" title="Permalink to this headline">¶</a></h2>
+<p>To show off some other cool things that sphinx can do, we’ll add in an extra
+page with a little more pizzaz.:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">What</span> <span class="n">a</span> <span class="n">great</span> <span class="n">page</span>
+<span class="o">=================</span>
+
+<span class="n">This</span> <span class="n">page</span><span class="p">,</span> <span class="n">truly</span><span class="p">,</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">greatest</span> <span class="n">page</span> <span class="n">on</span> <span class="n">the</span> <span class="n">internet</span><span class="o">.</span>
+
+<span class="n">See</span><span class="p">,</span> <span class="n">we</span><span class="s1">&#39;ve even got `David Bowie &lt;https://www.youtube.com/watch?v=iYYRH4apXDo&gt;`_.</span>
+
+<span class="k">as</span> <span class="n">well</span> <span class="k">as</span> <span class="n">pictures</span> <span class="n">of</span> <span class="n">cute</span> <span class="n">cats</span>
+
+<span class="o">..</span> <span class="n">image</span><span class="p">::</span>  <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">lh6</span><span class="o">.</span><span class="n">ggpht</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sw_iT7GZASdAYeiecsZEHJE</span><span class="o">-</span><span class="n">EgDhdK2rCWUzZOJS0OFiGpoi9qn8iMH2nuXHgWg2PA</span><span class="o">=</span><span class="n">h900</span>
+   <span class="p">:</span><span class="n">align</span><span class="p">:</span>   <span class="n">center</span>
+   <span class="p">:</span><span class="n">target</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">en</span><span class="o">.</span><span class="n">wikipedia</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">wiki</span><span class="o">/</span><span class="n">Cat</span><span class="o">/</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="edit-the-index-file">
+<h1>Edit the index file<a class="headerlink" href="#edit-the-index-file" title="Permalink to this headline">¶</a></h1>
+<p>Now that we’ve added pages, we also need to add a reference to them in our site’s
+table of contents. We’ll add a line for each page to the TOC (inside <code class="docutils literal"><span class="pre">index.rst</span></code>)
+so that the section looks like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Contents</span><span class="p">:</span>
+
+<span class="o">..</span> <span class="n">toctree</span><span class="p">::</span>
+   <span class="p">:</span><span class="n">maxdepth</span><span class="p">:</span> <span class="mi">2</span>
+
+   <span class="n">API</span>
+   <span class="n">overview</span>
+   <span class="n">awesomepage</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Make sure all the page names are indented to the same level as the <code class="docutils literal"><span class="pre">:</span></code> above.</p>
+</div>
+</div>
+
+
+  <div class='prev-next-bottom'>
+    
+     <a class='left-prev' href="modify.html" title="previous chapter">Customizing the index file</a>
+     <a class='right-next' href="hosting.html" title="next chapter">Hosting your documentation</a>
+  <div style='clear:both;'></div>
+
+  </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+<h1 class="logo"><a href="index.html">Zero to Sphinx</a></h1>
+
+
+
+<p class="blurb">A quick guide to documenting your project with Sphinx</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=docathon&repo=zero_to_docs&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installing sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structure.html">Sphinx documentation structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modify.html">Customizing the index file</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Adding a new file to our documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#edit-the-index-file">Edit the index file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hosting.html">Hosting your documentation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="extend.html">Extending your Sphinx setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Generating a gallery with sphinx-gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="links.html">Links</a></li>
+</ul>
+
+
+<div class="relations">
+<h3>Navigation</h3>
+<ul>
+  <li><a href="index.html">Documentation Home</a><ul>
+  <li><a href="modify.html" title="Previous">Prev: Customizing the index file</a></li>
+  <li><a href="hosting.html" title="Next">Next: Hosting your documentation</a></li>
+  </ul>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Chris Holdgraf.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/add.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

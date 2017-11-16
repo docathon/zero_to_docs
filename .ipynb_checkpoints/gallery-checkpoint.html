@@ -1,0 +1,168 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Generating a gallery with sphinx-gallery &#8212; Zero to Sphinx v0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="generating-a-gallery-with-sphinx-gallery">
+<h1>Generating a gallery with sphinx-gallery<a class="headerlink" href="#generating-a-gallery-with-sphinx-gallery" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal"><span class="pre">sphinx-gallery</span></code> lets us generate scripts using reStructuredText <strong>alongside python</strong>.
+This means that we can include formatting to make it easier to follow our work.
+Let’s add the next few blocks of code to our trapezoid plot and see how it looks.</p>
+<p>Add the following sections of text to the <code class="docutils literal"><span class="pre">plot_trapezoid.py</span></code> file in the examples
+folder.</p>
+<blockquote>
+<div><p># Define our function
+# ——————-
+#
+# Below we’ll define a function that we’ll integrate
+# $$ 2.2a^3 + .3a^2 + 2a + .1 $$</p>
+<p># Now plot the function
+# ———————
+#
+# Using this function, we’ll plot the function itself for a range of
+# points.</p>
+<p># Finally, plot the area
+# ———————-
+#
+# Finally we’ll show how the area under the curve changes as a
+# function of how many points we use to create the trapezoids.</p>
+</div></blockquote>
+<div class="section" id="changing-the-chosen-gallery-image">
+<h2>Changing the chosen gallery image<a class="headerlink" href="#changing-the-chosen-gallery-image" title="Permalink to this headline">¶</a></h2>
+<p>We can also manually choose the image we want for the gallery. Add this
+comment to the beginning of the script to do so:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
+</pre></div>
+</div>
+<p>Now build the documentation:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span>
+</pre></div>
+</div>
+<p>and open the built page for the trapezoid example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">../</span><span class="n">sphinx_template</span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">auto_examples</span><span class="o">/</span><span class="n">plot_trapezoid</span><span class="o">.</span><span class="n">html</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>We should also update our <code class="docutils literal"><span class="pre">index.rst</span></code> file so that the built gallery shows
+up in our table of contents.:</p>
+<p class="last">auto_examples/index</p>
+</div>
+</div>
+<div class="section" id="adding-a-subfolder-of-gallery-images">
+<h2>Adding a subfolder of gallery images<a class="headerlink" href="#adding-a-subfolder-of-gallery-images" title="Permalink to this headline">¶</a></h2>
+<p>If we have multiple galleries, we can easily pass them to sphinx-gallery by using
+sub-folders in our examples folder. Let’s split our two examples into their own folders.</p>
+<p>Note that we need to have a <cite>README.txt</cite> file for <strong>each folder</strong>.</p>
+</div>
+<div class="section" id="wrapping-up">
+<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">sphinx-gallery</span></code> has many more things you can do with it, and we encourage you to check
+out their documentation to learn more about this toolbox.</p>
+<p>If you want some inspiration, you can <a class="reference external" href="https://github.com/sphinx-gallery/sphinx-gallery#who-uses-sphinx-gallery">find a list of projects</a>
+using <code class="docutils literal"><span class="pre">sphinx-gallery</span></code> on their github readme.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Zero to Sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installing sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../structure.html">Sphinx documentation structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modify.html">Customizing the index file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../add.html">Adding a new file to our documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../add.html#edit-the-index-file">Edit the index file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hosting.html">Hosting your documentation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../extend.html">Extending your Sphinx setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gallery.html">Generating a gallery with sphinx-gallery</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Chris Holdgraf.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/.ipynb_checkpoints/gallery-checkpoint.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

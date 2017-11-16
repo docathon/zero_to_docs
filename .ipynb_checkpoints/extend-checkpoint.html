@@ -1,0 +1,151 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Extending your Sphinx setup &#8212; Zero to Sphinx v0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="extending-your-sphinx-setup">
+<h1>Extending your Sphinx setup<a class="headerlink" href="#extending-your-sphinx-setup" title="Permalink to this headline">¶</a></h1>
+<p>This page covers some common ways to improve upon your Sphinx documentation. Most
+of this is accomplished with sphinx plugins and modifications to
+your documentation’s configuration files.</p>
+<div class="section" id="adding-references-between-your-modules">
+<h2>Adding references between your modules<a class="headerlink" href="#adding-references-between-your-modules" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes you want to reference something without having to manually specify a URL.
+In this case, we can use intersphinx to make this easy. This lets us specify a reference
+by name, or by reference to a python module / function.</p>
+<div class="section" id="to-add-references-for-specific-words">
+<h3>To add references for specific words<a class="headerlink" href="#to-add-references-for-specific-words" title="Permalink to this headline">¶</a></h3>
+<p>Add the following to <code class="docutils literal"><span class="pre">conf.py</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">intersphinx_mapping</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;python&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;https://docs.python.org/3/&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+                       <span class="s1">&#39;matplotlib&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;http://matplotlib.org/&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="to-add-references-to-a-function-or-module">
+<h3>To add references to a function or module<a class="headerlink" href="#to-add-references-to-a-function-or-module" title="Permalink to this headline">¶</a></h3>
+<p>Try adding the following to the bottom of a docstring for one of our functions:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>:any:`os.environ`
+</pre></div>
+</div>
+<p>Next we need to tell sphinx to generate the documentation for our API:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">apidoc</span> <span class="n">my_package</span> <span class="o">-</span><span class="n">o</span> <span class="n">docs</span><span class="o">/</span><span class="n">source</span>
+</pre></div>
+</div>
+<p>Now, when we generate the site, it should automatically link to our own functions.</p>
+</div>
+</div>
+<div class="section" id="using-autosummary-with-sphinx">
+<h2>Using autosummary with sphinx<a class="headerlink" href="#using-autosummary-with-sphinx" title="Permalink to this headline">¶</a></h2>
+<p>Autosummary (and a similar plugin called <code class="docutils literal"><span class="pre">autodoc</span></code>) is useful for automatically
+generating API documentation for your functions, classes, etc. Setting up autosummary
+involves activating a sphinx plugin. TODO</p>
+<ul class="simple">
+<li>Add an <cite>automodule</cite> entry for the module you wish to document (see
+[sphinx_template](<a class="reference external" href="https://raw.githubusercontent.com/choldgraf/sphinx_template/master/docs/source/API.rst">https://raw.githubusercontent.com/choldgraf/sphinx_template/master/docs/source/API.rst</a>)).</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Zero to Sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installing sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../structure.html">Sphinx documentation structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modify.html">Customizing the index file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../add.html">Adding a new file to our documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../add.html#edit-the-index-file">Edit the index file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hosting.html">Hosting your documentation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../extend.html">Extending your Sphinx setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gallery.html">Generating a gallery with sphinx-gallery</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Chris Holdgraf.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/.ipynb_checkpoints/extend-checkpoint.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
